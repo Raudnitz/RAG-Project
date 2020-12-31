@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import OpenGame from './OpenGame.js'
 
-export default function OpenGamesList({openGames}) {
-    return(
-         openGames.map(game =>
-            {
-                return <OpenGame openGame={game}/>
-            }
+export class OpenGamesList extends Component {
+    render() {
+        return (
+            this.props.openGames.map(game =>
+                {
+                    return <OpenGame key={game.id} openGame={game}/>
+                }
+            )
         )
-    )
-
+    }
 }
+
+export default OpenGamesList

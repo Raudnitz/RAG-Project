@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import OpenGamesList from './OpenGamesList.js';
+
 function App() {
     const [openGames, setOpenGames] = useState([
         {
@@ -9,7 +10,7 @@ function App() {
 
         },
         {
-            id: 'g1',
+            id: 'g2',
             name: 'game1',
             players: ['p1', 'p2'],
 
