@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Box from '@material-ui/core/Box'
 
-export default function OpenGame({ openGame }) {
-    return(
+class OpenGame extends Component {
+    render() {
+        return (
             <div>
-                {openGame}
+                <Box bgcolor='#f1f1f1' m={1} p={1}>
+                    {this.props.openGame.name}
+                    <br/>
+                    {this.props.openGame.players}
+                    <br/>
+                    <button>Play</button>
+                </Box>
             </div>
-    )
-
+        )
+    }
 }
+
+export default OpenGame;
