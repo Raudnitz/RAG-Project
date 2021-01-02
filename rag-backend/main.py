@@ -45,7 +45,7 @@ PLAYERS_MOCK = """
 
 @api.route('/get_games')
 def get_games():
-    return GAMES_MOCK
+    return json.dumps(GAMES_MOCK)
 
 
 @api.route('/get_players')
@@ -54,4 +54,4 @@ def get_players():
 
 
 if __name__ == '__main__':
-    api.run(port=4000, host='0.0.0.0')
+    api.run(debug=True, port=4000, host='0.0.0.0')
